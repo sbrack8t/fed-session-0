@@ -3,13 +3,13 @@ const sass = require("gulp-sass");
 const fs = require("fs");
 const browserSync = require("browser-sync").create();
 
-// Create Twing environment
-const { TwingEnvironment, TwingLoaderFilesystem } = require("twing");
-let loader = new TwingLoaderFilesystem("./");
-let twing = new TwingEnvironment(loader);
-
 // Build Twig Templates
 function buildTemplates(cb) {
+  // Create Twing environment
+  const { TwingEnvironment, TwingLoaderFilesystem } = require("twing");
+  let loader = new TwingLoaderFilesystem("./");
+  let twing = new TwingEnvironment(loader);
+
   fs.readFile("./data/data.json", (err, data) => {
     if (err) {
       throw err;
@@ -31,7 +31,6 @@ function buildTemplates(cb) {
     });
   });
 
-  // Callback function
   cb();
 }
 
@@ -53,11 +52,11 @@ function devBrowser(cb) {
 
 function watchFiles() {
   watch(["scss/**/*.scss"], { usePolling: true, interval: 1500 }, buildStyles);
-  watch(
-    ["templates/**/*.twig", "index.twig"],
-    { usePolling: true, interval: 1500 },
-    buildTemplates
+  watch(["templates/**/*.twig", "index.twig"]).on(
+    "change",
+    series(buildTemplates)
   );
+
   watch("dist/*.html").on("change", browserSync.reload);
 }
 

@@ -1,10 +1,34 @@
-
-
 {% extends "templates/base.twig" %}
 
 {% block body %}
+  {# Embed template #}
+  {% embed "templates/section.twig" with {
+    title: "Unicorns"
+  } %}
+    
+    {% block section_block %}
+      Hendrerit risus nam mus.
+    {% endblock section_block %}
 
-  {% include "templates/section.twig" %}
-  Hello {{name }} see the planet
+  {% endembed  %}
 
+  {# Access data from data/data.json using dot notation #}
+  {{spotlight_section.title}}
+  {{spotlight_section.see_all.link_text}}
+
+  {# Twig for Loop #}
+  {% for item in spotlight_section.items %}
+    
+    {# Get the index inside a loop #}
+    <p>The index of the loop {{loop.index}}</p>
+
+    {# Boolean to check if current item is the first #}
+    <p>Boolean first item {{loop.first}}</p>
+
+    {# If statement #}
+    {% if loop.first %}
+      I am a Unicorn
+    {% endif %}
+    
+  {% endfor %}
 {% endblock body %}

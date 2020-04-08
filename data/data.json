@@ -1,3 +1,74 @@
 {
-  "name": "this is the real test"
+  "spotlight_section": {
+    "title": "Spotlight",
+    "see_all": {
+      "url": "#see_all",
+      "link_text": "See All"
+    },
+    "items": [
+      {
+        "title": "Want More Money Start Unicorns",
+        "url": "#want-more-money-start-unicorns",
+        "image": "https://picsum.photos/978/548?random=1",
+        "category": "unicorns",
+        "authors": ["Byron Rose", "Geraldine Crawford"]
+      },
+      {
+        "title": "7 Easy Ways To Make Unicorns Faster",
+        "url": "#7-easy-ways-to-make-unicorns-faster",
+        "image": "https://picsum.photos/466/314?random=2",
+        "category": "unicorns",
+        "authors": ["Chester Carter", "Geraldine Crawford", "Gene Barker"]
+      },
+      {
+        "title": "10 Funny Unicorns Quotes",
+        "url": "#10-funny-unicorns-quotes",
+        "image": "https://picsum.photos/466/314?random=3",
+        "category": "unicorns",
+        "authors": ["Byron Rose"]
+      }
+    ]
+  },
+  "recent_section": {
+    "title": "What we're reading",
+    "see_all": {
+      "url": "#see_all",
+      "link_text": "See All Articles"
+    },
+    "call_to_action": {
+      "url": "#subscribe",
+      "link_text": "Subscribe"
+    },
+    "intro": "Sagittis nostra ultricies magna tortor in tristique dictumst vel ligula, congue ante tempor penatibus placerat nascetur libero felis litora, semper purus amet condimentum adipiscing gravida nam est. Vestibulum congue aliquet urna facilisis vivamus taciti nam libero netus proin sed, maecenas accumsan rutrum vitae ut himenaeos praesent donec orci penatibus, cubilia ultricies mollis molestie imperdiet sagittis ornare tincidunt id sollicitudin. Eleifend curabitur volutpat ornare rutrum elementum feugiat nec, primis leo ultricies orci class taciti, id proin magna felis sollicitudin tempus.",
+    "items": [
+      {
+        "title": "Why My Bear Is Better Than Yours",
+        "url": "#why-my-bear-is-better-than-yours",
+        "image": "https://picsum.photos/978/548?random=4",
+        "category": "bears",
+        "authors": ["Byron Rose", "Geraldine Crawford"]
+      },
+      {
+        "title": "Want More Money Start Unicorns",
+        "url": "#want-more-money-start-unicorns",
+        "image": "https://picsum.photos/466/314?random=5",
+        "category": "unicorns",
+        "authors": ["Chester Carter", "Geraldine Crawford", "Gene Barker"]
+      },
+      {
+        "title": "Beware The Bears Scam",
+        "url": "#beware-the-bears-scam",
+        "image": "https://picsum.photos/466/314?random=6",
+        "category": "bears",
+        "authors": ["Saul Griffith"]
+      },
+      {
+        "title": "10 Funny Unicorns Quotes",
+        "url": "#10-funny-unicorns-quotes",
+        "image": "https://picsum.photos/466/314?random=7",
+        "category": "unicorns",
+        "authors": ["Byron Rose", " Rudolph Barnes"]
+      }
+    ]
+  }
 }
