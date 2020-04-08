@@ -24,4 +24,4 @@ In the `index.twig` recreate the html for the design comp using the data found i
 
 
 ## Activity Two
-Style your project to match the design in the sketch file. Store you sass files in `/scss`
+Style your project to match the design in the sketch file. Store your sass files in `/scss`
