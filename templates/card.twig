@@ -1,0 +1,26 @@
+
+<article class="teaser {{modifier_classes}}">
+{% include "templates/category.twig" with {
+  category_type: card_category
+} %}
+
+{% if card_image %}
+<a href="{{card_url}}">
+  {% include "templates/figure.twig" with {
+    figure_src: card_image,
+    figure_alt: card_image_alt,
+    fig_caption: card_image_caption
+  } %}
+</a>
+{% endif %}
+  <h3 class="teaser__title">
+    <a class="teaser__link" href="{{card_url}}">{{card_title}}</a>
+  </h3>
+  <div class="teaser__byline">
+    by  {{card_authors|join(', ')}}
+  </div>
+  <div class="teaser__content">
+    {{card_content}}
+  </div>
+</article>
+<!-- // TEASER -->

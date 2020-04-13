@@ -1,8 +1,33 @@
-<section class="section">
-  <h2>{{title}}</h2>
+<!-- SECTION // -->
+<section class="page-section {{ modifier_classes }}">
+  <div class="l-constrain">
+    {% if section_title or  section_url %}
+      <header class="page-section__header">
+        {% if section_title %}
+          <h2 class="page-section__title">{{ section_title }}</h2>
+        {% endif %}
 
-  {% block section_block %}
-    
-  {% endblock section_block %}
- 
+        {% if section_url and section_link_text %}
+          <a href="{{ section_url }}" class="page-section__link">{{ section_link_text }}</a>
+        {% endif %}
+      </header>
+    {% endif %}
+
+    {% if section_intro %}
+    <div class="page-section__intro">
+      {{ section_intro }}
+    </div>
+    {% endif %}
+
+    <div class="page-section__body">
+    {% block section_block %}
+      
+    {% endblock section_block %}
+    </div>
+    <footer>
+      {% block section_footer %}
+      {% endblock section_footer %}
+    </footer>
+  </div>
 </section>
+<!-- // SECTION  -->
