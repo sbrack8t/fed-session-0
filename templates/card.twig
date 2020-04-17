@@ -1,9 +1,10 @@
 
 <article class="teaser {{modifier_classes}}">
-{% include "templates/category.twig" with {
-  category_type: card_category
-} %}
-
+{% if card_category %}
+  {% include "templates/category.twig" with {
+    category_type: card_category
+  } %}
+{% endif %}
 {% if card_image %}
 <a href="{{card_url}}">
   {% include "templates/figure.twig" with {

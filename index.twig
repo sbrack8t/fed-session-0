@@ -1,5 +1,6 @@
 {% extends "templates/base.twig" %}
 
+
 {% block body %}
   {# Embed template #}
   {% embed "templates/section.twig" with {
@@ -8,8 +9,6 @@
     section_link_text: spotlight_section.see_all.link_text,
     modifier_classes: 'page-section--spotlight',
     section_intro: spotlight_section.intro
-
-    
   } %}
     
     {% block section_block %}
