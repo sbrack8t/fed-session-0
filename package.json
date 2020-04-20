@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "breakpoint-sass": "^2.7.1",
     "twing": "^4.0.3",
     "twing-loader": "^3.0.1"
   },

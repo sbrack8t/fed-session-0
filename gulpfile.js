@@ -36,7 +36,11 @@ function buildTemplates(cb) {
 
 function buildStyles() {
   return src("scss/style.scss")
-    .pipe(sass().on("error", sass.logError))
+    .pipe(
+      sass({
+        includePaths: ["./node_modules/breakpoint-sass/stylesheets"],
+      }).on("error", sass.logError)
+    )
     .pipe(dest("./dist/css"))
     .pipe(browserSync.stream());
 }
